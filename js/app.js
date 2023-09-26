@@ -16,6 +16,7 @@ const marvel = {
                     <img src="${hero.thumbnail.path}.${hero.thumbnail.extension}" alt="${hero.name}" class="img-thumbnail">
                 </a>
                 <h3 class="tittle">${hero.name}</h3>
+                
             </div>
           `;
         }
