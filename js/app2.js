@@ -20,7 +20,6 @@ const marvel = {
       fetch(urlAPI4).then((res) => res.json()),
       fetch(urlAPI5).then((res) => res.json()),
     ]).then(([json1, json2, json3, json4, json5]) => {
-      // Procesar los resultados de json1
       for (const hero of json1.data.results) {
         let urlHero = hero.urls[0].url;
         contentHTML += `
