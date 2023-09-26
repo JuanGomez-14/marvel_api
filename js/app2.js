@@ -85,6 +85,24 @@ const marvel = {
           </center>
         </div>
       `;
+
+      for (let i = 0; i < 3; i++) {
+        series1 = json4.data.results[i];
+        let urlSeries = series1.urls[0].url;
+        contentHTML += `
+        <div class="container">
+          <center>
+            <div class="img-ironman">
+              <h3 class="tittle">${series1.title}</h3>
+              <a href="${urlSeries}" target="_blank">
+                <img src="${series1.thumbnail.path}.${series1.thumbnail.extension}" alt="${series1.name}" class="img-ironman">
+              </a>  
+            </div>
+          </center>
+        </div>
+      `;
+      }
+
       container.innerHTML = contentHTML;
     });
   },
