@@ -85,21 +85,31 @@ const marvel = {
         </div>
       `;
 
+      container.innerHTML = contentHTML;
+    });
+  },
+};
+
+const marvel2 = {
+  render: () => {
+    const urlAPI4 =
+      "https://gateway.marvel.com:443/v1/public/characters/1009368/series?ts=1&apikey=9b18d1517056474e8a8bf052d4945580&hash=2f5cf10b13a0810f305a2e86cf39da3d";
+
+    const container = document.querySelector("#ironman-row");
+    let contentHTML = "";
+
+    Promise.all([fetch(urlAPI4).then((res) => res.json())]).then(([json4]) => {
       for (let i = 0; i < 3; i++) {
         series1 = json4.data.results[i];
         let urlSeries = series1.urls[0].url;
         contentHTML += `
-        <div class="container">
-          <center>
-            <div class="img-ironman">
-              <h3 class="tittle">${series1.title}</h3>
-              <a href="${urlSeries}" target="_blank">
-                <img src="${series1.thumbnail.path}.${series1.thumbnail.extension}" alt="${series1.name}" class="img-ironman">
-              </a>  
-            </div>
-          </center>
-        </div>
-      `;
+              <div class="col-md-4">
+                <a href="${urlSeries}" target="_blank">
+                  <img src="${series1.thumbnail.path}.${series1.thumbnail.extension}" alt="${series1.name}" class="img-ironman">
+                </a>  
+                <h3 class="tittle">${series1.title}</h3>
+              </div>
+        `;
       }
 
       container.innerHTML = contentHTML;
@@ -108,3 +118,4 @@ const marvel = {
 };
 
 marvel.render();
+marvel2.render();
