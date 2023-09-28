@@ -1,15 +1,12 @@
 img.img-ironman {
-  width: 80%;
-  height: 80%;
+  width: 40%;
+  height: 40%;
+  margin-bottom: 10px;
 }
 
 body {
   background-color: #f8f9fa;
   font-family: Arial, sans-serif;
-}
-
-.container1 {
-  margin-top: 20px;
 }
 
 .ironman {
@@ -23,4 +20,18 @@ body {
 /* Estilos para las columnas de ironman-row */
 .ironman-row .col-md-4 {
   margin-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 60px; /* Tamaño de la fuente aumentado */
+  color: #ff0000; /* Letras rojas */
+  margin-top: 50px; /* Margen superior reducido */
+  transform: translateY(-50%);
+  font-family: "Bebas Neue", sans-serif; /* Fuente personalizada */
+}
+
+img.img-thumbnail {
+  width: 80%;
+  height: 80%;
 }

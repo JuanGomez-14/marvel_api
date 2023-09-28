@@ -26,7 +26,7 @@ const marvel = {
         <div class="container">
           <center>
             <div class="img-ironman">
-              <h3 class="tittle">${hero.name}</h3>
+              <h3 class="title">${hero.name}</h3>
               <a href="${urlHero}" target="_blank">
                 <img src="${hero.thumbnail.path}.${hero.thumbnail.extension}" alt="${hero.name}" class="img-ironman">
               </a>  
@@ -105,7 +105,7 @@ const marvel2 = {
         contentHTML += `
               <div class="col-md-4">
                 <a href="${urlSeries}" target="_blank">
-                  <img src="${series1.thumbnail.path}.${series1.thumbnail.extension}" alt="${series1.name}" class="img-ironman">
+                  <img src="${series1.thumbnail.path}.${series1.thumbnail.extension}" alt="${series1.name}" class="img-thumbnail">
                 </a>  
                 <h3 class="tittle">${series1.title}</h3>
               </div>

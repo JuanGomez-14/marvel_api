@@ -3,7 +3,11 @@ img.img-thumbnail {
   height: 80%;
 }
 
-img.img-ironman {
-  width: 30%;
-  height: 30%;
+.title {
+  text-align: center;
+  font-size: 80px; /* Tamaño de la fuente aumentado */
+  color: #ff0000; /* Letras rojas */
+  margin-top: 10vh; /* Margen superior reducido */
+  transform: translateY(-50%);
+  font-family: "Bebas Neue", sans-serif; /* Fuente personalizada */
 }
